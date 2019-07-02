@@ -43,4 +43,4 @@
 
 	open the app url from your browser http://localhost:80
 
-	![ScreenShot] https://gitlab.com/OElGebaly/osama_api-exercise-solution/blob/master/test_images/65910880_477562056336922_844799537179525120_n.png
+	![ScreenShot](https://gitlab.com/OElGebaly/osama_api-exercise-solution/blob/master/test_images/65910880_477562056336922_844799537179525120_n.png)
