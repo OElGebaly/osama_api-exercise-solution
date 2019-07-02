@@ -38,3 +38,9 @@
 
 	$ curl --request DELETE --url http://127.0.0.1/people/04d673e4-f4ef-4e92-a8b0-1b4d3d4f28bc --header 'Content-Type: application/json' 
 	"Deleted: 04d673e4-f4ef-4e92-a8b0-1b4d3d4f28bc"    
+
+## GUI Testing
+
+	open the app url from your browser http://localhost:80
+
+	![ScreenShot] https://gitlab.com/OElGebaly/osama_api-exercise-solution/blob/master/test_images/65910880_477562056336922_844799537179525120_n.png
