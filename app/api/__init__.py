@@ -1,12 +1,9 @@
-
-
 # -*- coding: utf-8 -*-
-from io import TextIOWrapper
-import csv
-from flask import Flask, request
+
+from flask import Flask
 from os import environ as env
 from uuid import uuid4
-
+import csv
 
 # Init app
 app = Flask(__name__)
@@ -20,20 +17,24 @@ app.secret_key = env.get("APP_SECRET_KEY")
 
 from .models import Raw_data, db, raw_data_schema, raw_datas_schema
 
+
+def load_data(filename):
+        with open(filename) as f:
+                reader = csv.reader(f)
+                for row in reader:
+                    uuid = uuid4()
+                    new_raw_data = Raw_data(uuid,bool(row[0]), int(row[1]), str(row[2]), str(row[3]), float(row[4]), int(row[5]), int(row[6]), float(row[7]))       
+                    db.session.add(new_raw_data)
+                    db.session.commit()
+
 # Database
 with app.app_context():
         db.init_app(app)
         db.create_all()  
+        
+# Load the data        
+        try:
+                load_data(env.get("FILENAME_CSV"))
+        except Exception as e:
+                print('Caught this error: ' + repr(e))
 
-try:
-    csv_file = "../../db/titanic.csv"
-    csv_reader = csv.reader(csv_file, delimiter=',')
-    for row in csv_reader:
-        uuid = uuid4()
-        new_raw_data = Raw_data(uuid,survived=row[0], passengerClass=row[1], name=row[2], sex=row[3], age=row[4], siblingsOrSpousesAboard=row[5], parentsOrChildrenAboard=row[6], fare=row[7])
-
-        db.session.add(new_raw_data)
-        db.session.commit()
-
-except Exception as e:
-        print('Caught this error: ' + repr(e))
