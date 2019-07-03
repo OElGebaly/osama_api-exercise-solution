@@ -41,6 +41,5 @@
 
 ## GUI Testing
 
-	open the app url from your browser http://localhost:80
      ![image](/tree/master/test_images/65910880_477562056336922_844799537179525120_n.png)
 
