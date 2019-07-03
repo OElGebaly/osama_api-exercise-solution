@@ -41,5 +41,5 @@
 
 ## GUI Testing
 
-     ![image](/tree/master/test_images/65910880_477562056336922_844799537179525120_n.png)
+     ![image](/test_images/65910880_477562056336922_844799537179525120_n.png)
 
