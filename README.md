@@ -14,14 +14,12 @@
 
     $ docker-compose up -d
 
-    deployment command will apply the below steps:
+    ####deployment command will apply the below steps:
 
     - start 3 new docker containers.
     - DB container will be launching the Mysql 5.7 service.
-    - app container will start by installing all the required libraries included into app/requirements.txt file , and run the commands necessary to start the python application, python image used is "jfloff/alpine-python:latest" as a small sized image.
+    - app container will start by installing all the required libraries included into app/requirements.txt file , and run the commands necessary to start the python application
     - nginx latest release with necessary configuration files
-
-
 
 
 ## Command Line Testing
@@ -43,5 +41,18 @@
 
 ## GUI Testing
 
-     [![image](https://gitlab.com/OElGebaly/osama_api-exercise-solution/blob/master/test_images/65392515_367504950626657_8528403082336272384_n.png)]
+    #### open http://127.0.0.1:80 from you browser
 
+## Deployment to Kubernetes
+
+   ####all the required deployment and service files are included at the /deployment directory , deployment files were all created via the KOMPOSE tool , passwords and relevant credentials are all stored in secret file managed by kubernetes secret service
+
+   #### before you execute the below deployment command, make sure that container images were build and added to either locally or you docker registry
+   
+    $ kubectl create -f app-deployment.yaml,db-deployment.yaml,www-service.yaml,db-claim0-persistentvolumeclaim.yaml,db-service.yaml,www-deployment.yaml,secret.yaml
+   
+   #### check if pods are running 
+    $ kubectl get pods
+   
+   #### check running services
+    $ kubectl get svc
