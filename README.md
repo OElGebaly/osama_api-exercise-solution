@@ -43,7 +43,19 @@ deployment command will apply the below steps:
 
 open http://127.0.0.1:80 
 
+### search page
+![](test_images/65910880_477562056336922_844799537179525120_n.png)
+
+### once you click on all passengers button
+![](test_images/65952280_583156838874421_1763326577451466752_n.png)
+
+### return once record by UUID
 ![](test_images/65392515_367504950626657_8528403082336272384_n.png)
+
+### swagger 
+![](test_images/65627091_379913915991336_8807938219887820800_n.png)
+
+
 
 ## Deployment to Kubernetes
 
