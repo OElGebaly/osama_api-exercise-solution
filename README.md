@@ -43,6 +43,8 @@ deployment command will apply the below steps:
 
 open http://127.0.0.1:80 
 
+![](test_images/65392515_367504950626657_8528403082336272384_n.png)
+
 ## Deployment to Kubernetes
 
 all the required deployment and service files are included at the /deployment directory , deployment files were all created via the KOMPOSE tool , passwords and relevant credentials are all stored in secret file managed by kubernetes secret service
