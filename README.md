@@ -37,8 +37,7 @@
 	$ curl --request GET --url http://127.0.0.1/people --header 'Content-Type: application/json' 
 
  ### to delete existing record by UUID
-	$ curl --request DELETE --url http://127.0.0.1/people/04d673e4-f4ef-4e92-a8b0-1b4d3d4f28bc --header 'Content-Type: application/json' 
-	"Deleted: 04d673e4-f4ef-4e92-a8b0-1b4d3d4f28bc"    
+	$ curl --request DELETE --url http://127.0.0.1/people/04d673e4-f4ef-4e92-a8b0-1b4d3d4f28bc --header 'Content-Type: application/json'   
 
 ## GUI Testing
 
