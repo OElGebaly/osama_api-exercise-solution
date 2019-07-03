@@ -1,26 +1,26 @@
 ## Introduction
 
-    Project represents a soltuon API to read titanic passengers data from mysql DB , API is representd via 5 methods.
+Project represents a soltuon API to read titanic passengers data from mysql DB , API is representd via 5 methods.
 
 ## Technologies
 
-    - application is written in Python language using Flask library in order to obtain the API capabilities.
-    - DB engine used is Mysql.
-    - Used nginx as application server.
-    - application is Docker based to run in 3 different docker containers. 
+   * application is written in Python language using Flask library in order to obtain the API capabilities.
+   * DB engine used is Mysql.
+   * Used nginx as application server.
+   * application is Docker based to run in 3 different docker containers. 
 
 
 ## Run
 
     $ docker-compose up -d
 
-    deployment command will apply the below steps:
+deployment command will apply the below steps:
 
-    - start 3 new docker containers.
-    - DB container will be launching the Mysql 5.7 service.
-    - app container will start by installing all the required libraries included into app/requirements.txt file , and run the commands necessary to start the python application.
-    - once app started it will create the necessary DB schema and fill the DB with he records included in the CSV file.
-    - nginx latest release with necessary configuration files
+   * start 3 new docker containers.
+   * DB container will be launching the Mysql 5.7 service.
+   * app container will start by installing all the required libraries included into app/requirements.txt file , and run the commands necessary to start the python application.
+   * once app started it will create the necessary DB schema and fill the DB with he records included in the CSV file.
+   * nginx latest release with necessary configuration files
 
 
 ## Command Line Testing
@@ -41,11 +41,11 @@
 
 ## GUI Testing
 
-    open http://127.0.0.1:80 from you browser
+open http://127.0.0.1:80 from you browser
 
 ## Deployment to Kubernetes
 
-    all the required deployment and service files are included at the /deployment directory , deployment files were all created via the KOMPOSE tool , passwords and relevant credentials are all stored in secret file managed by kubernetes secret service
+all the required deployment and service files are included at the /deployment directory , deployment files were all created via the KOMPOSE tool , passwords and relevant credentials are all stored in secret file managed by kubernetes secret service
 
  ### before you execute the below deployment command, make sure that container images were build and added to either locally or you docker registry
    
