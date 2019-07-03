@@ -49,7 +49,7 @@ open http://127.0.0.1:80
 ### once you click on all passengers button
 ![](test_images/65952280_583156838874421_1763326577451466752_n.png)
 
-### return once record by UUID
+### return one record by UUID
 ![](test_images/65392515_367504950626657_8528403082336272384_n.png)
 
 ### swagger 
