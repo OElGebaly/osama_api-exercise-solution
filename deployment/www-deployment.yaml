@@ -1,0 +1,31 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.18.0 (06a2e56)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: www
+  name: www
+spec:
+  replicas: 1
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        io.kompose.service: www
+    spec:
+      containers:
+      - image: www
+        name: www
+        ports:
+        - containerPort: 80
+        resources: {}
+      initContainers:
+      - name: init-db
+        image: busybox
+        command: ['sh', '-c', 'until nc -z db:3306; do echo waiting for db; sleep 2; done;']
+      restartPolicy: Always
+status: {}
