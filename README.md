@@ -18,7 +18,8 @@
 
     - start 3 new docker containers.
     - DB container will be launching the Mysql 5.7 service.
-    - app container will start by installing all the required libraries included into app/requirements.txt file , and run the commands necessary to start the python application
+    - app container will start by installing all the required libraries included into app/requirements.txt file , and run the commands necessary to start the python application.
+    - once app started it will create the necessary DB schema and fill the DB with he records included in the CSV file.
     - nginx latest release with necessary configuration files
 
 
