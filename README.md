@@ -14,7 +14,7 @@
 
     $ docker-compose up -d
 
-    ####deployment command will apply the below steps:
+    deployment command will apply the below steps:
 
     - start 3 new docker containers.
     - DB container will be launching the Mysql 5.7 service.
@@ -41,13 +41,13 @@
 
 ## GUI Testing
 
-    #### open http://127.0.0.1:80 from you browser
+    open http://127.0.0.1:80 from you browser
 
 ## Deployment to Kubernetes
 
-   ####all the required deployment and service files are included at the /deployment directory , deployment files were all created via the KOMPOSE tool , passwords and relevant credentials are all stored in secret file managed by kubernetes secret service
+    all the required deployment and service files are included at the /deployment directory , deployment files were all created via the KOMPOSE tool , passwords and relevant credentials are all stored in secret file managed by kubernetes secret service
 
-   #### before you execute the below deployment command, make sure that container images were build and added to either locally or you docker registry
+    ###before you execute the below deployment command, make sure that container images were build and added to either locally or you docker registry
    
     $ kubectl create -f app-deployment.yaml,db-deployment.yaml,www-service.yaml,db-claim0-persistentvolumeclaim.yaml,db-service.yaml,www-deployment.yaml,secret.yaml
    
