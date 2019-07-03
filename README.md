@@ -41,7 +41,7 @@ deployment command will apply the below steps:
 
 ## GUI Testing
 
-open http://127.0.0.1:80 from you browser
+open http://127.0.0.1:80 
 
 ## Deployment to Kubernetes
 
